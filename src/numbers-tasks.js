@@ -75,8 +75,17 @@ function getAverage(number1, number2) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  let lineX;
+  let lineY;
+  let line;
+  lineX = x2 - x1;
+  lineX *= lineX;
+  lineY = y2 - y1;
+  lineY *= lineY;
+  line = lineX + lineY;
+  line = Math.sqrt(line);
+  return line;
 }
 
 /**
